@@ -17,6 +17,11 @@ final class PdoConnectionBuilder implements ConnectionBuilderInterface
     {
     }
 
+    public static function create(array $settings, ?PoolInterface $pool  = null): self
+    {
+        return new self($settings, $pool);
+    }
+
     public function buildConnection(): PdoConnection
     {
         return PdoConnection::create($this->settings, $this->pool);

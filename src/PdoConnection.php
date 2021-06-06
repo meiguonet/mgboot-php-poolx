@@ -14,7 +14,7 @@ final class PdoConnection implements ConnectionInterface
 
     private PDO $pdo;
 
-    private function __construct(array $settings, ?PoolInterface $pool)
+    private function __construct(array $settings, ?PoolInterface $pool = null)
     {
         if ($pool instanceof PoolInterface) {
             $this->pool = $pool;
@@ -60,7 +60,7 @@ final class PdoConnection implements ConnectionInterface
     {
     }
 
-    public static function create(array $settings, ?PoolInterface $pool): self
+    public static function create(array $settings, ?PoolInterface $pool = null): self
     {
         return new self($settings, $pool);
     }

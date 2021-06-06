@@ -17,6 +17,11 @@ final class RedisConnectionBuilder implements ConnectionBuilderInterface
     {
     }
 
+    public static function create(array $settings, ?PoolInterface $pool  = null): self
+    {
+        return new self($settings, $pool);
+    }
+
     public function buildConnection(): RedisConnection
     {
         return RedisConnection::create($this->settings, $this->pool);
