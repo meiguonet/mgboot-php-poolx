@@ -1,0 +1,21 @@
+{
+  "name": "meiguonet/mgboot-php-poolx",
+  "description": "common pool for meiguonet mgboot php framework",
+  "keywords": ["swoole", "database", "connection pool"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Simon.Ye",
+      "email": "samlinye@163.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "mgboot\\poolx\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0.0",
+    "meiguonet/mgboot-php-common": "^1.0.0"
+  }
+}
