@@ -30,7 +30,7 @@ final class PoolContext
         if (!is_int($workerId)) {
             $workerId = Swoole::getWorkerId();
         }
-        
+
         $key = self::getPoolKey($poolType, $workerId);
         $pool = self::$pools[$key];
         return $pool instanceof PoolInterface ? $pool : null;
