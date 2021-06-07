@@ -25,9 +25,12 @@ final class PoolContext
         self::$pools[$key] = $pool;
     }
 
-    public static function getPool(int $poolType): ?PoolInterface
+    public static function getPool(int $poolType, ?int $workerId = null): ?PoolInterface
     {
-        $workerId = Swoole::getWorkerId();
+        if (!is_int($workerId)) {
+            $workerId = Swoole::getWorkerId();
+        }
+        
         $key = self::getPoolKey($poolType, $workerId);
         $pool = self::$pools[$key];
         return $pool instanceof PoolInterface ? $pool : null;
