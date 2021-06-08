@@ -2,12 +2,12 @@
 
 namespace mgboot\poolx;
 
-use mgboot\common\ArrayUtils;
-use mgboot\common\Cast;
-use mgboot\common\DotAccessData;
-use mgboot\common\Regexp;
-use mgboot\common\StringUtils;
-use mgboot\common\Swoole;
+use mgboot\bo\DotAccessData;
+use mgboot\Cast;
+use mgboot\constant\Regexp;
+use mgboot\swoole\Swoole;
+use mgboot\util\ArrayUtils;
+use mgboot\util\StringUtils;
 use RuntimeException;
 use Throwable;
 

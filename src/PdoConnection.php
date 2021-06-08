@@ -2,8 +2,8 @@
 
 namespace mgboot\poolx;
 
-use mgboot\common\DotAccessData;
-use mgboot\common\JsonUtils;
+use mgboot\bo\DotAccessData;
+use mgboot\util\JsonUtils;
 use PDO;
 use RuntimeException;
 use Throwable;

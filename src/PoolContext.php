@@ -2,7 +2,7 @@
 
 namespace mgboot\poolx;
 
-use mgboot\common\Swoole;
+use mgboot\swoole\Swoole;
 use Throwable;
 
 final class PoolContext
